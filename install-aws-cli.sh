@@ -1,4 +1,6 @@
 #!/bin/bash
+# Script will install aws cli tools and prompt for aws keys
+# For Redhat distribution only
 
 set -x
 
@@ -22,3 +24,9 @@ curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+echo " Add AWS access key and secret key"
+
+aws configure
+
+echo " Finished installing aws cli "
