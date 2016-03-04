@@ -16,7 +16,7 @@ fi
 
 which unzip >/dev/null 2>&1
 if  [ $? != 0 ]; then
-  yum install uzip >/dev/null 2>&1
+  yum install unzip >/dev/null 2>&1
 fi
 
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
